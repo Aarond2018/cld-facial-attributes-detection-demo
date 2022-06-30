@@ -32,6 +32,7 @@ export default async function handler(req, res) {
 					height: 240,
 					width: 240,
 					crop: "thumb",
+					sign_url: true
 				});
 		res.status(200).json(response);
 	} catch (error) {
@@ -39,10 +40,10 @@ export default async function handler(req, res) {
 	}
 }
 
-export const config = {
-	api: {
-		bodyParser: {
-			sizeLimit: "5mb",
-		},
-	},
-};
+// export const config = {
+// 	api: {
+// 		bodyParser: {
+// 			sizeLimit: "5mb",
+// 		},
+// 	},
+// };

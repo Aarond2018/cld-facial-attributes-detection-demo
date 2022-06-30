@@ -24,6 +24,7 @@ export default function Home() {
 			const response = await axios.post("/api/upload", {image});
       setImageId(response.data.public_id)
 			setUploadStatus("Upload successful");
+      console.log(response.data)
 		} catch (error) {
 			setUploadStatus("Upload failed..");
 		}
@@ -53,7 +54,6 @@ export default function Home() {
 		}
   } 
  
-
   return (
     <main className={styles.main}>
       <h2>Cld facial attributes detection add-on demo</h2>
@@ -76,7 +76,7 @@ export default function Home() {
         </div>
 
         <div className={styles.output}>
-          {cldData ? <img src={cldData} alt="" /> : "output image"}
+          {cldData ? <img src={cldData} alt=" " /> : "output image"}
         </div>
         
       </div>
